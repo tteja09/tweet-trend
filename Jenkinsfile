@@ -70,6 +70,15 @@ environment {
             }
         }
     }
+    stage(" Deploy ") {
+       steps {
+         script {
+            echo '<--------------- Helm Deploy Started --------------->'
+            sh './deploy.sh'
+            echo '<--------------- Helm deploy Ends --------------->'
+         }
+       }
+     }
 
     }
 }
